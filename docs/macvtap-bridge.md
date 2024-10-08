@@ -26,7 +26,7 @@ target/debug/cloud-hypervisor \
 	--disk path=~/workloads/focal.raw \
 	--cpus boot=1 --memory size=512M \
 	--cmdline "root=/dev/vda1 console=hvc0" \
-    --net fd=3,mac=$mac 3<>$"$tapdevice"
+    --net fd=3,mac=$mac 3<>"$tapdevice"
 ```
 
 As the guest is now connected to the same L2 network as the host you can obtain an IP address based on your host network (potentially including via DHCP)
